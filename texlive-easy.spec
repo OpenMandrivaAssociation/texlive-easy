@@ -1,3 +1,9 @@
+# revision 19440
+# category Package
+# catalog-ctan /macros/latex/contrib/easy
+# catalog-date 2007-01-01 18:45:52 +0100
+# catalog-license lppl
+# catalog-version 0.99
 Name:		texlive-easy
 Version:	0.99
 Release:	1
@@ -55,6 +61,7 @@ vectors.
 %doc %{_texmfdistdir}/doc/latex/easy/for-latex2html/easytable.perl
 %doc %{_texmfdistdir}/doc/latex/easy/for-latex2html/easyvector.perl
 %doc %{_texmfdistdir}/doc/latex/easy/mydoc.sty
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -65,3 +72,5 @@ vectors.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
