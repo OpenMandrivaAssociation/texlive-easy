@@ -6,7 +6,7 @@
 # catalog-version 0.99
 Name:		texlive-easy
 Version:	0.99
-Release:	7
+Release:	8
 Summary:	A collection of easy-to-use macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/easy
