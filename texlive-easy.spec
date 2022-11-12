@@ -1,18 +1,12 @@
-# revision 19440
-# category Package
-# catalog-ctan /macros/latex/contrib/easy
-# catalog-date 2007-01-01 18:45:52 +0100
-# catalog-license lppl
-# catalog-version 0.99
 Name:		texlive-easy
-Version:	0.99
-Release:	11
+Version:	19440
+Release:	1
 Summary:	A collection of easy-to-use macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/easy
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/easy.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/easy.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/easy.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/easy.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ for writing tables; - easyvector, a C-like syntax for writing
 vectors.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -55,24 +49,10 @@ vectors.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.99-2
-+ Revision: 751279
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.99-1
-+ Revision: 718292
-- texlive-easy
-- texlive-easy
-- texlive-easy
-- texlive-easy
-
