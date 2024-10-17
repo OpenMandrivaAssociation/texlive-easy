@@ -3,7 +3,7 @@ Version:	19440
 Release:	2
 Summary:	A collection of easy-to-use macros
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/easy
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/easy
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/easy.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/easy.doc.r%{version}.tar.xz
